@@ -1,0 +1,7 @@
+/*
+ * Public API Surface of test-icons
+ */
+export * from './lib/test-icons.service';
+export * from './lib/test-icons.component';
+export * from './lib/test-icons.module';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiJFOi9Bbmd1bGFyL0xlYXJuL2ljb24vdGVzdC1pY29ucy9wcm9qZWN0cy90ZXN0LWljb25zL3NyYy8iLCJzb3VyY2VzIjpbInB1YmxpYy1hcGkudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0dBRUc7QUFFSCxjQUFjLDBCQUEwQixDQUFDO0FBQ3pDLGNBQWMsNEJBQTRCLENBQUM7QUFDM0MsY0FBYyx5QkFBeUIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qXG4gKiBQdWJsaWMgQVBJIFN1cmZhY2Ugb2YgdGVzdC1pY29uc1xuICovXG5cbmV4cG9ydCAqIGZyb20gJy4vbGliL3Rlc3QtaWNvbnMuc2VydmljZSc7XG5leHBvcnQgKiBmcm9tICcuL2xpYi90ZXN0LWljb25zLmNvbXBvbmVudCc7XG5leHBvcnQgKiBmcm9tICcuL2xpYi90ZXN0LWljb25zLm1vZHVsZSc7XG4iXX0=

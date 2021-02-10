@@ -1,0 +1,19 @@
+{
+  "name": "duy-icons",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^10.2.4",
+    "@angular/core": "^10.2.4"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "main": "bundles/test-icons.umd.js",
+  "module": "fesm2015/test-icons.js",
+  "es2015": "fesm2015/test-icons.js",
+  "esm2015": "esm2015/test-icons.js",
+  "fesm2015": "fesm2015/test-icons.js",
+  "typings": "test-icons.d.ts",
+  "metadata": "test-icons.metadata.json",
+  "sideEffects": false
+}
