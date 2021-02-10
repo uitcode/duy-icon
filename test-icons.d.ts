@@ -1,5 +1,6 @@
 /**
  * Generated bundle index. Do not edit.
  */
+/// <amd-module name="test-icons" />
 export * from './public-api';
-export { IconsRegistry as ɵa } from './lib/icons-registry.service';
+//# sourceMappingURL=test-icons.d.ts.map

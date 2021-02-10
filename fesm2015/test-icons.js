@@ -1,18 +1,7 @@
-import { ɵɵdefineInjectable, Injectable, Component, ChangeDetectionStrategy, ElementRef, Optional, Inject, Input, NgModule } from '@angular/core';
+import { ɵɵdefineInjectable, ɵsetClassMetadata, Injectable, ɵɵdirectiveInject, ElementRef, ɵɵdefineComponent, ɵɵprojectionDef, ɵɵprojection, Component, ChangeDetectionStrategy, Optional, Inject, Input, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
-class TestIconsService {
-    constructor() { }
-}
-TestIconsService.ɵprov = ɵɵdefineInjectable({ factory: function TestIconsService_Factory() { return new TestIconsService(); }, token: TestIconsService, providedIn: "root" });
-TestIconsService.decorators = [
-    { type: Injectable, args: [{
-                providedIn: 'root'
-            },] }
-];
-TestIconsService.ctorParameters = () => [];
-
-class IconsRegistry {
+class IconsRegistryService {
     constructor() {
         this.registry = new Map();
     }
@@ -26,13 +15,16 @@ class IconsRegistry {
         return this.registry.get(iconName);
     }
 }
-IconsRegistry.ɵprov = ɵɵdefineInjectable({ factory: function IconsRegistry_Factory() { return new IconsRegistry(); }, token: IconsRegistry, providedIn: "root" });
-IconsRegistry.decorators = [
-    { type: Injectable, args: [{
+IconsRegistryService.ɵfac = function IconsRegistryService_Factory(t) { return new (t || IconsRegistryService)(); };
+IconsRegistryService.ɵprov = ɵɵdefineInjectable({ token: IconsRegistryService, factory: IconsRegistryService.ɵfac, providedIn: 'root' });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(IconsRegistryService, [{
+        type: Injectable,
+        args: [{
                 providedIn: 'root'
-            },] }
-];
+            }]
+    }], null, null); })();
 
+const _c0 = ["*"];
 class TestIconsComponent {
     constructor(element, iconRegistry, document) {
         this.element = element;
@@ -53,34 +45,55 @@ class TestIconsComponent {
         return (div.querySelector('svg') ||
             this.document.createElementNS('http://www.w3.org/2000/svg', 'path'));
     }
-    ngOnInit() { }
 }
-TestIconsComponent.decorators = [
-    { type: Component, args: [{
+TestIconsComponent.ɵfac = function TestIconsComponent_Factory(t) { return new (t || TestIconsComponent)(ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(IconsRegistryService), ɵɵdirectiveInject(DOCUMENT, 8)); };
+TestIconsComponent.ɵcmp = ɵɵdefineComponent({ type: TestIconsComponent, selectors: [["icon"]], inputs: { name: "name" }, ngContentSelectors: _c0, decls: 1, vars: 0, template: function TestIconsComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵɵprojectionDef();
+        ɵɵprojection(0);
+    } }, styles: ["[_nghost-%COMP%]  svg { width: 32px; height: 32px }"], changeDetection: 0 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TestIconsComponent, [{
+        type: Component,
+        args: [{
                 selector: 'icon',
-                template: ` <ng-content></ng-content> `,
-                changeDetection: ChangeDetectionStrategy.OnPush,
-                styles: [':host::ng-deep svg { width: 32px; height: 32px }']
-            },] }
-];
-TestIconsComponent.ctorParameters = () => [
-    { type: ElementRef },
-    { type: IconsRegistry },
-    { type: undefined, decorators: [{ type: Optional }, { type: Inject, args: [DOCUMENT,] }] }
-];
-TestIconsComponent.propDecorators = {
-    name: [{ type: Input }]
-};
+                template: `
+    <ng-content></ng-content>
+  `,
+                styles: [':host::ng-deep svg { width: 32px; height: 32px }'],
+                changeDetection: ChangeDetectionStrategy.OnPush
+            }]
+    }], function () { return [{ type: ElementRef }, { type: IconsRegistryService }, { type: undefined, decorators: [{
+                type: Optional
+            }, {
+                type: Inject,
+                args: [DOCUMENT]
+            }] }]; }, { name: [{
+            type: Input
+        }] }); })();
 
 class TestIconsModule {
 }
-TestIconsModule.decorators = [
-    { type: NgModule, args: [{
+TestIconsModule.ɵmod = ɵɵdefineNgModule({ type: TestIconsModule });
+TestIconsModule.ɵinj = ɵɵdefineInjector({ factory: function TestIconsModule_Factory(t) { return new (t || TestIconsModule)(); } });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(TestIconsModule, { declarations: [TestIconsComponent], exports: [TestIconsComponent] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TestIconsModule, [{
+        type: NgModule,
+        args: [{
                 declarations: [TestIconsComponent],
-                imports: [],
                 exports: [TestIconsComponent]
-            },] }
-];
+            }]
+    }], null, null); })();
+
+class IconsService {
+    constructor() { }
+}
+IconsService.ɵfac = function IconsService_Factory(t) { return new (t || IconsService)(); };
+IconsService.ɵprov = ɵɵdefineInjectable({ token: IconsService, factory: IconsService.ɵfac, providedIn: 'root' });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(IconsService, [{
+        type: Injectable,
+        args: [{
+                providedIn: 'root'
+            }]
+    }], function () { return []; }, null); })();
 
 /*
  * Public API Surface of test-icons
@@ -90,5 +103,5 @@ TestIconsModule.decorators = [
  * Generated bundle index. Do not edit.
  */
 
-export { TestIconsComponent, TestIconsModule, TestIconsService, IconsRegistry as ɵa };
+export { IconsRegistryService, IconsService, TestIconsComponent, TestIconsModule };
 //# sourceMappingURL=test-icons.js.map
