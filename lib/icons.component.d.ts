@@ -1,6 +1,6 @@
 import { ElementRef } from '@angular/core';
 import { IconsRegistryService } from './registry-icons.service';
-import { nameIcons } from './icons/build/my-icons.model';
+import { nameIcons } from './icons/build/icon.model';
 export declare class TestIconsComponent {
     private element;
     private iconRegistry;
@@ -10,3 +10,4 @@ export declare class TestIconsComponent {
     constructor(element: ElementRef, iconRegistry: IconsRegistryService, document: any);
     private svgElementFromString;
 }
+//# sourceMappingURL=icons.component.d.ts.map
