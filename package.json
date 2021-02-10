@@ -1,6 +1,6 @@
 {
   "name": "duy-icons",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^10.2.4",
     "@angular/core": "^10.2.4"
@@ -8,14 +8,12 @@
   "dependencies": {
     "tslib": "^2.0.0"
   },
-  "main": "bundles/test-icons.umd.js",
-  "module": "fesm2015/test-icons.js",
-  "es2015": "fesm2015/test-icons.js",
-  "esm2015": "esm2015/test-icons.js",
-  "fesm2015": "fesm2015/test-icons.js",
-  "typings": "test-icons.d.ts",
-  "sideEffects": false,
-  "scripts": {
-    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy. This is not allowed.\\nPlease delete and rebuild the package, without compiling with Ivy, before attempting to publish.\\n')\" && exit 1"
-  }
+  "main": "bundles/duy-icons.umd.js",
+  "module": "fesm2015/duy-icons.js",
+  "es2015": "fesm2015/duy-icons.js",
+  "esm2015": "esm2015/duy-icons.js",
+  "fesm2015": "fesm2015/duy-icons.js",
+  "typings": "duy-icons.d.ts",
+  "metadata": "duy-icons.metadata.json",
+  "sideEffects": false
 }
